@@ -83,13 +83,56 @@
 
 // Multiples of 6
 
-var num = 6
+// var num = 6
 
-while (num <= 60000)
-{
-    if (num % 6 == 0) {
-        console.log(num)
-    }
-    num++
-}
-console.log("Finished")
+// while (num <= 60000)
+// {
+//     if (num % 6 == 0) {
+//         console.log(num)
+//     }
+//     num++
+// }
+// console.log("Finished")
+
+// Counting the Dojo Way
+
+// for (let i = 0; i <= 100; i++){
+//     if (i % 5 == 0 && i % 10 != 0){
+//         console.log("Coding")
+//     } else if (i % 5 == 0 && i % 10 == 0){
+//         console.log("Coding Dojo")
+//     } else {
+//         console.log(i)
+//     }
+
+// }
+
+// What do you know?
+
+// function printIncoming(incoming) {
+//     console.log(incoming)
+// }
+// printIncoming("Hello")
+
+// Whoa, That suckers huge!
+
+// let sum = 0;
+
+// for (let i = -300000; i < 300000; i++) {
+//     if (i % 2 != 0) {
+//         sum += i
+//     }
+// }
+// console.log(sum)
+
+// Countdown by Fours
+// let num = 2016
+
+// while (num > 0){
+//     if (num % 2 == 0){
+//         console.log(num)
+//     }
+//     num = num - 4;
+// }
+
+// 
