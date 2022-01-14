@@ -34,5 +34,3 @@ function minToFront(array) {
 console.log(minToFront([4,2,1,3,5]))
 
 
-// copied this from Sal's demonstration in an attempt to try to understand what he did, why
-// he did it and remember how to solve similar problems in the future. This is not my work, this is Sal's solution.
