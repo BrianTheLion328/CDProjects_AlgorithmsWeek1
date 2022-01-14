@@ -74,7 +74,7 @@ function removeAt(array, index){
     for (let i = index + 1; i <= array.length; i++){
         array[i - 1] = array[i]
     }
-    // pop the final value so we dont have 2 repeat values at the end after moving them all up one spot. 
+    // pop the final value so we dont have 2 repeat values at the end after moving them all up one spot.
     array.pop()
 
     return valueWeAreLookingFor
@@ -82,3 +82,7 @@ function removeAt(array, index){
 removeAtTestArray = [89, 7, 0, 22, 50, 43, 21]
 console.log("REMOVE AT: ", removeAt(removeAtTestArray, 4))
 console.log(removeAtTestArray)
+
+
+const randomNumber = Math.ceil(Math.random() * 10)
+console.log("RANDOM NUMBER: ", randomNumber)
