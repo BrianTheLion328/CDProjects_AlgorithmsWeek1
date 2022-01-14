@@ -84,5 +84,3 @@ console.log("REMOVE AT: ", removeAt(removeAtTestArray, 4))
 console.log(removeAtTestArray)
 
 
-const randomNumber = Math.ceil(Math.random() * 10)
-console.log("RANDOM NUMBER: ", randomNumber)
