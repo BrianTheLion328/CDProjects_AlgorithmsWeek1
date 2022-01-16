@@ -32,4 +32,25 @@ console.log(sampleArray2)
 
 // Rotate
 
+function rotate(array, shiftByNum){
+    // make a shortcut to speed up your solution. Instead of just rotating x-number of times (the shifyByNum),
+    // divide the shiftByNum by the array.length and rotate a remaining number of times. So if your array is
+    // 5 values long, and your shift number is 204, instead of rotating 204 times, just use the modelo (%) to
+    // divide down into the lowest leftover number and rotate THAT many times. so if your shift number is 5, then
+    // 204 % 5 will leave a remainder of 4, so then you just need to rotate 4 times.
 
+     // NOTE: if the shiftbyNumber divided by the modelo = 0, just return array bc it will end up being the same.
+
+    let rotateNumber = shiftByNum % array.length
+    let firstIndex = array[0]
+    // now rotate your array "rotateNumber" times.
+    // if statement if rotateNumber is greater than 0.
+    if (rotateNumber === 0){
+        return array
+    } else {
+        for (let i = 0; i > array.length; i++){
+            
+        }
+    }
+
+}
