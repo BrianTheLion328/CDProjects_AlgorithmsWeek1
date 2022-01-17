@@ -5,7 +5,7 @@ length. Working in-place means you cannot have another array to push into. Move 
 array you are given. Do not use built-in array methods like splice() pop() push() etc. */
 
 function reverseArray(array) {
-    // Loop through the array - divied by half so you dont re-reverse the array back to the original array.
+    // Loop through the array - divided by half so you dont re-reverse the array back to the original array.
     for (var i = 0; i < array.length / 2; i++) {
         // Swap values
         var tempVariable = array[i];
@@ -41,16 +41,82 @@ function rotate(array, shiftByNum){
 
      // NOTE: if the shiftbyNumber divided by the modelo = 0, just return array bc it will end up being the same.
 
-    let rotateNumber = shiftByNum % array.length
-    let firstIndex = array[0]
-    // now rotate your array "rotateNumber" times.
-    // if statement if rotateNumber is greater than 0.
-    if (rotateNumber === 0){
+    // let rotateNumber = shiftByNum % array.length
+    // let firstIndex = array[0]
+    // // now rotate your array "rotateNumber" times.
+    // // if statement if rotateNumber is greater than 0.
+    // if (rotateNumber === 0){
+    //     return array
+    // } else {
+    //     for (let i = 0; i > array.length; i++){
+    //     }
+    // }
+
+    var newValue = shiftByNum % array.length
+
+    if (newValue > 0) {
+        for (var j = newValue; j > 0; j--) {
+            var temp = array[0];
+            var temp2 = array[0];
+
+            for (var i = 0; i < array.length - 1; i++) {
+                temp = array[i + 1];
+                array[i + 1] = temp2;
+                temp2 = temp;
+            }
+            array[0] = temp2
+        }
+        return array;
+    } else if (newValue === 0){
         return array
     } else {
-        for (let i = 0; i > array.length; i++){
-            
-        }
-    }
+        for (var k = newValue; k < 0; k++) {
+            var negTempVar = array[array.length - 1];
+            var negTempVar2 = array[array.length - 1];
 
+            for (var x = array.length - 1; x > 0; x--) {
+                negTempVar = array[x - 1];
+                array[x - 1] = negTempVar2;
+                negTempVar2 = negTempVar;
+            }
+            array[array.length - 1] = negTempVar2;
+        }
+        return array
+    }
 }
+
+console.log("POSITIVE NUMBER ROTATE: ", rotate( [1, 2, 3, 4, 5], 1) )
+console.log("WHEN SHIFT COUNT IS ZERO: ", rotate( [1, 2, 3, 4, 5], 0))
+console.log("NEGATIVE NUMBER ROTATE: ", rotate( [1, 2, 3, 4, 5], -1) )
+
+// [ 1, 2, 3, 4, 5]
+
+// i = 0
+// temp = 2
+// array = [1, 1, 3, 4, 5]
+// temp2 = 2
+
+// i = 1
+// temp = 3
+// array = [1, 1, 2, 4, 5]
+// temp2 = 3
+
+// i = 2
+// temp = 4
+// array = [1, 1, 2, 3, 5]
+// temp2 = 4
+
+// i = 3
+// temp = 5
+// array = [1, 1, 2, 3, 4]
+// temp2 = 5
+
+// after line 60
+// array = [5, 1, 2, 3, 4]
+
+// FILTER RANGE
+
+// Given an array and MIN and MAX values, retain only the
+// array values between MIN and MAX. Work in-place, return
+// the array you are given, with values in their original
+// order. No built-in array functions. 
