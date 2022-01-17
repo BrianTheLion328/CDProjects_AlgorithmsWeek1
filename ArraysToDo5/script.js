@@ -4,6 +4,7 @@
 
 function arrayAverage(array){
     let sum = 0
+    // if array is empty
     if (array[0] === null){
         return 0;
     }
