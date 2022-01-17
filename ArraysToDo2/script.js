@@ -119,4 +119,47 @@ console.log("NEGATIVE NUMBER ROTATE: ", rotate( [1, 2, 3, 4, 5], -1) )
 // Given an array and MIN and MAX values, retain only the
 // array values between MIN and MAX. Work in-place, return
 // the array you are given, with values in their original
-// order. No built-in array functions. 
+// order. No built-in array functions.
+
+function filterRange(array, min, max) {
+    let indexCounter = 0;
+    for (let i = 0; i < array.length; i++){
+        if (array[i] >= min && array[i] <= max) {
+            temp = array[indexCounter]
+            array[indexCounter] = array[i]
+            array[i] = temp
+            indexCounter++
+        }
+    }
+    array.length = indexCounter;
+    return array
+}
+console.log("FILTER RANGE: ", filterRange( [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 4, 11) );
+
+
+// CONCAT
+
+/*  create an empty array to put the concated array into
+    create a variable that will be your pointer going over each index
+    create a while loop that as long as one array has values will keep looping
+    as long as that array hasnt ended, keep looping and putting its values into the new array
+    do the same for the second array, but make sure that it begins where the first array stopped
+    increase your pointer by 1 each time, then return the new array that has been injected with
+    the concated values.
+*/
+
+function concat(array1, array2){
+    newArray = []
+    let pointer = 0;
+    while (pointer < array1.length || pointer < array2.length){
+        if (array1[pointer] != null) {
+            newArray[pointer] = array1[pointer]
+        }
+        if (array2[pointer] != null) {
+            newArray[pointer + array1.length] = array2[pointer]
+        }
+        pointer++
+    }
+    return newArray;
+}
+console.log("CONCAT EXAMPLE: ", concat([1, 2, 3, 4], [5, 6, 7, 8]))
