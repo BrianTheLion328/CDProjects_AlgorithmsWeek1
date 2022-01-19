@@ -14,5 +14,5 @@ function arrayAverage(array){
     return sum;
 }
 
-console.log("Array Averages: ", arrayAverage([1, 2, 3, 12, 6, 11, 5, 4, 0, 10, 7, 8, 9]))
+console.log("Array Averages: ", arrayAverage([1, 3, 12, 6, 11, 5, 4, 0, 10, 7, 8, 9]))
 console.log("averages: ", arrayAverage([]))
